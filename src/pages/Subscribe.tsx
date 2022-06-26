@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
 import  CodeMockupImg  from '../../src/assets/code-mockup.png'
+import  ReactIconImg  from '../../src/assets/react-icon.svg'
 
 
 export function Subscriber(){
@@ -26,7 +27,7 @@ export function Subscriber(){
 
     return(
         <main className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-            <img className="absolute" src="src/assets/react-icon.svg" alt="" />
+            <img className="absolute" src={ReactIconImg} alt="React Icon" />
             <div className="z-10 w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
                 <div className="max-w-[640px]">
                     <Logo />
