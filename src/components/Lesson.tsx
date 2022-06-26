@@ -2,7 +2,7 @@ import { CheckCircle, Lock } from 'phosphor-react'
 import { isPast, format } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
 import { Link, useParams } from 'react-router-dom';
-
+import LessonDetailIcon from '../assets/lesson-detail-icon.svg'
 import classNames from 'classnames'
 
 interface LessonProps{
@@ -31,11 +31,14 @@ export function Lesson(props: LessonProps){
             <span className="text-gray-300 ">
                 {availableDateFormatted}
             </span>
-            <div className={classNames('rounded border p-4 mt-2 ',{
+            <div className={classNames('rounded border p-4 mt-2 relative',{
                 'bg-green-500 border-green-500 group-hover:border-green-500': isActiveLesson,
                 'border-gray-500' : !isActiveLesson
 
             })}>
+
+                {isActiveLesson && (<img src={LessonDetailIcon} className="absolute left-[-10px]" alt="Lesson Arrow" />)}
+
                 <header className="flex items-center justify-between">
                     {isLessonAvailable ? (
                     <span className={classNames('text-sm  font-medium flex items-center gap-2',{
