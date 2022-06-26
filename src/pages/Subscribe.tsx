@@ -1,6 +1,36 @@
+import { gql, useMutation } from "@apollo/client";
+import { useState, FormEvent } from "react";
+import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 
+const CREATE_SUBSCRIBER_MUTATION = gql`
+    mutation CreateSubscriber($name: String!, $email: String!){
+        createSubscriber(data: {name: $name, email: $email}){
+            id
+        }
+    }
+`
+
 export function Subscriber(){
+
+    const navigate = useNavigate()
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+
+    const [createSubscriber, {loading}] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+
+    async function handleSubscribe(e:FormEvent){
+        e.preventDefault()
+        await createSubscriber({
+            variables:{
+                name,
+                email,
+            }
+        })
+
+        navigate('/event')
+    }
+
     return(
         <main className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
             <img className="absolute" src="src/assets/react-icon.svg" alt="" />
@@ -16,12 +46,25 @@ export function Subscriber(){
                 </div>
                 <div className="p-8 bg-gray-700 border border-gray-500 rounded">
                     <strong className="text-2xl mb-6 block">Inscreva-se gratuitamente</strong>
-                    <form action="" className="flex flex-col gap-2 w-full">
-                        <input type="text" className="bg-gray-900 rounded px-5 h-14" placeholder="Seu nome completo" />
-                        <input type="email" className="bg-gray-900 rounded px-5 h-14" placeholder="Digite seu e-mail" />
+                    <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
+                        <input 
+                            type="text" 
+                            className="bg-gray-900 rounded px-5 h-14" 
+                            placeholder="Seu nome completo" 
+                            required
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        <input 
+                            type="email" 
+                            className="bg-gray-900 rounded px-5 h-14" 
+                            placeholder="Digite seu e-mail" 
+                            required
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                         <button 
-                            type="submit" 
-                            className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors" >
+                            type="submit"
+                            disabled={loading} 
+                            className="mt-4 bg-green-500 uppercase py-4 rounded font-bold text-sm hover:bg-green-700 transition-colors disabled:opacity-50">
                                 Garantir minha vaga
                         </button>
                     </form>
