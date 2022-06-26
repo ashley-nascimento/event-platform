@@ -33,7 +33,7 @@ export function Lesson(props: LessonProps){
             </span>
             <div className={classNames('rounded border p-4 mt-2 ',{
                 'bg-green-500 border-green-500 group-hover:border-green-500': isActiveLesson,
-                'border-gray-500 cursor-not-allowed' : !isActiveLesson
+                'border-gray-500' : !isActiveLesson
 
             })}>
                 <header className="flex items-center justify-between">
