@@ -24,14 +24,16 @@ export function Lesson(props: LessonProps){
     return(
         <Link 
             to={`/event/lesson/${props.slug}`} 
-            className="first-letter:uppercase group"
+            className={classNames("first-letter:uppercase group",{
+                'pointer-events-none' : !isLessonAvailable
+            })}
         >
             <span className="text-gray-300 ">
                 {availableDateFormatted}
             </span>
-            <div className={classNames('rounded border p-4 mt-2 group-hover:border-green-500',{
-                'bg-green-500 border-green-500': isActiveLesson,
-                'border-gray-500' : !isActiveLesson
+            <div className={classNames('rounded border p-4 mt-2 ',{
+                'bg-green-500 border-green-500 group-hover:border-green-500': isActiveLesson,
+                'border-gray-500 cursor-not-allowed' : !isActiveLesson
 
             })}>
                 <header className="flex items-center justify-between">
