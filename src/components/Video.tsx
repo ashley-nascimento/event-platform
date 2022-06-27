@@ -3,6 +3,7 @@ import { CaretRight, DiscordLogo, FileArrowDown, Lightning, ImageSquare } from "
 import { useGetLessonBySlugQuery } from "../graphql/generated";
 import '@vime/core/themes/default.css'
 import { Loading } from "./Loading";
+import { Footer } from "./Footer";
 
 interface VideoProps{
     lessonSlug: string;
@@ -98,6 +99,7 @@ export function Video(props : VideoProps){
                     </a>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
