@@ -4,6 +4,9 @@ import ptBR from 'date-fns/locale/pt-BR'
 import { Link, useParams } from 'react-router-dom';
 import LessonDetailIcon from '../assets/lesson-detail-icon.svg'
 import classNames from 'classnames'
+import { SidebarContext } from "../context/sidebar";
+import { useContext } from 'react';
+
 
 interface LessonProps{
     title: string;
@@ -14,6 +17,12 @@ interface LessonProps{
 
 export function Lesson(props: LessonProps){
     const { slug } = useParams<{ slug: string }>() 
+    const { handleCloseSidebar } = useContext(SidebarContext);
+
+    function handleHiddenSidebar() {
+        handleCloseSidebar();
+          return;
+      }
 
     const isLessonAvailable = isPast(props.availableAt)
     const availableDateFormatted = format(props.availableAt, "EEEE' • 'd' de 'MMMM' • 'k'h'mm",{
@@ -24,6 +33,7 @@ export function Lesson(props: LessonProps){
     return(
         <Link 
             to={`/event/lesson/${props.slug}`} 
+            onClick={handleHiddenSidebar}
             className={classNames("first-letter:uppercase group",{
                 'pointer-events-none' : !isLessonAvailable
             })}
