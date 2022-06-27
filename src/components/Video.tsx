@@ -35,16 +35,16 @@ export function Video(props : VideoProps){
             </div>
 
             <div className="p-8 max-w-[1100px] mx-auto">
-                <div className="flex items-start gap-16">
+                <div className="md:flex items-start gap-16">
                     <div className="flex-1">
-                        <h1 className=" text-2xl font-bold">
+                        <h1 className="text-lg md:text-2xl font-bold">
                             {data.lesson.title}
                         </h1>
-                        <p className="text-gray-200 mt-4 leading-relaxed">
+                        <p className="text-sm md:text-base text-gray-200 mt-4 leading-relaxed">
                             {data.lesson.description}
                         </p>
 
-                        { data.lesson.teacher && (<div className="flex items-center gap-4 mt-6">
+                        { data.lesson.teacher && (<div className="flex items-center gap-4 mt-6 mb-6 md:mb-0">
                             <img 
                             className="h-16 w-16 rounded-full border-2 border-blue-500"
                             src={data.lesson.teacher.avatarURL}
@@ -68,14 +68,14 @@ export function Video(props : VideoProps){
                     </div>
                 </div>
 
-                <div className="gap-8 mt-20 grid grid-cols-2">
-                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                <div className="gap-8 mt-20 grid md:grid-cols-2">
+                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-4 md:gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40} />
                         </div>
                         <div className="py-6 leading-relaxed">
-                            <strong className="text-2xl">Material Complementar</strong>
-                            <p className="text-gray-200 mt-2 text-sm">
+                            <strong className="text-lg md:text-2xl">Material Complementar</strong>
+                            <p className="text-gray-200 mt-2 text-xs md:text-sm">
                                 Acesse  o material complementar para acelerar o seu desenvolvimento
                             </p>
                         </div>
@@ -83,13 +83,13 @@ export function Video(props : VideoProps){
                             <CaretRight size={24} />
                         </div>
                     </a>
-                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
+                    <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-4 md:gap-6 hover:bg-gray-600 transition-colors">
                         <div className="bg-green-700 h-full p-6 flex items-center">
                             <ImageSquare size={40} />
                         </div>
                         <div className="py-6 leading-relaxed">
-                            <strong className="text-2xl">Wallpapers</strong>
-                            <p className="text-gray-200 mt-2 text-sm">
+                            <strong className="text-lg md:text-2xl">Wallpapers</strong>
+                            <p className="text-gray-200 mt-2 text-xs md:text-sm">
                                 Baixe wallpapers exclusivos da Maratona Explorer e personalize a sua máquina
                             </p>
                         </div>
