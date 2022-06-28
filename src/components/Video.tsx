@@ -57,7 +57,7 @@ export function Video(props : VideoProps){
                         </div>)}
                     </div>
                     <div className="flex flex-col gap-4">
-                        <a href="" className="p-4 text-sm bg-green-500 flex items-center rounded font-bold gap-2 uppercase justify-center hover:bg-green-700 transition-colors">
+                        <a href="" className="p-4 text-sm bg-pink-500 border border-pink-500 flex items-center rounded font-bold gap-2 uppercase justify-center hover:bg-pink-700 hover:border-pink-700  transition-colors">
                             <DiscordLogo size={24} />
                             Comunidade do Discord
                         </a>
@@ -70,7 +70,7 @@ export function Video(props : VideoProps){
 
                 <div className="gap-8 mt-20 grid md:grid-cols-2">
                     <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-4 md:gap-6 hover:bg-gray-600 transition-colors">
-                        <div className="bg-green-700 h-full p-6 flex items-center">
+                        <div className="bg-pink-700 h-full p-6 flex items-center">
                             <FileArrowDown size={40} />
                         </div>
                         <div className="py-6 leading-relaxed">
@@ -84,7 +84,7 @@ export function Video(props : VideoProps){
                         </div>
                     </a>
                     <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-4 md:gap-6 hover:bg-gray-600 transition-colors">
-                        <div className="bg-green-700 h-full p-6 flex items-center">
+                        <div className="bg-pink-700 h-full p-6 flex items-center">
                             <ImageSquare size={40} />
                         </div>
                         <div className="py-6 leading-relaxed">

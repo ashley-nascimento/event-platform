@@ -42,7 +42,7 @@ export function Lesson(props: LessonProps){
                 {availableDateFormatted}
             </span>
             <div className={classNames('rounded border p-4 mt-2 relative',{
-                'bg-green-500 border-green-500 group-hover:border-green-500': isActiveLesson,
+                'bg-pink-500 border-pink-500 group-hover:border-pink-500': isActiveLesson,
                 'border-gray-500' : !isActiveLesson
 
             })}>
@@ -68,7 +68,7 @@ export function Lesson(props: LessonProps){
 
                     <span className={classNames("text-xs rounded px-2 py-[0.125rem] text-white border font-bold",{
                         'border-white' : isActiveLesson,
-                        'border-green-300' : !isActiveLesson,
+                        'border-pink-300' : !isActiveLesson,
                     })}>
                        {props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'}
                     </span>

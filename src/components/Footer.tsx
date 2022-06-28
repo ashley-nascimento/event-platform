@@ -7,7 +7,7 @@ export function Footer(){
                 Desenvolvido por Ashley Nascimento
             </span>
 
-            <a className="text-gray-300 flex gap-2 leading-tight hover:text-green-500" href="https://github.com/ashley-nascimento">
+            <a className="text-gray-300 flex gap-2 leading-tight hover:text-pink-500" href="https://github.com/ashley-nascimento">
                 <GithubLogo size="18" />
                 GitHub
             </a>
