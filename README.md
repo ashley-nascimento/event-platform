@@ -39,11 +39,11 @@ O sistema é totalmente flexível podendo ser usado como base para diversas outr
 
 Além das funcionalidades criadas durante o curso, estarei adicionando novas funcionalidades para enriquecer ainda mais o conteúdo da aplicação.
 
-- Responsividade
-- Sidebar Toggled usando Context
-- Novo tema
-- Bloqueio de aulas não acessível
-- Spinner Loading enquanto as aulas não carregam
+- Responsividade;
+- Sidebar Toggled usando Context;
+- Novo esquema de cores;
+- Bloqueio de aulas com estado "Em breve";
+- Spinner Loading.
 
 <br>
 
