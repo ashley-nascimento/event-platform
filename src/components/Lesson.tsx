@@ -6,8 +6,6 @@ import LessonDetailIcon from '../assets/lesson-detail-icon.svg'
 import classNames from 'classnames'
 import { SidebarContext } from "../context/sidebar";
 import { useContext } from 'react';
-
-
 interface LessonProps{
     title: string;
     slug: string;
