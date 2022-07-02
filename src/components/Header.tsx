@@ -26,7 +26,15 @@ export function Header(){
 
             <div className="flex items-center mr-6 gap-2 md:hidden" onClick={handleHiddenSidebar}>
                 <span>Aulas</span> 
-                {sidebarIsOpen ? <X className="text-blue-500" size="32" /> : <List size={32} className="text-blue-500" />}
+                {sidebarIsOpen ? 
+                
+                <X className="text-blue-500" size="32" /> 
+                
+                : 
+                
+                <List size={32} className="text-blue-500" />
+                
+                }
             </div>
 
         </header>
