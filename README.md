@@ -2,8 +2,8 @@
 
 <p>
   <img src="https://img.shields.io/badge/made%20by-Ashley%20Nascimento-C65D7B?style=flat-square">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ashley-nascimento/dtmoney?color=C65D7B&style=flat-square">
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/ashley-nascimento/dtmoney?color=C65D7B&style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ashley-nascimento/event-platform?color=C65D7B&style=flat-square">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/ashley-nascimento/event-platform?color=C65D7B&style=flat-square">
 </p>
 
 <img align="right" src="src/assets/play-video.svg" width="35%" alt="Video">
